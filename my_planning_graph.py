@@ -528,7 +528,7 @@ class PlanningGraph():
         '''
         level_sum = 0
         for goal in self.problem.goal:
-            node = PgNode_s(literal, True)
+            node = PgNode_s(goal, True)
             for lev, nodes in enumerate(self.s_levels):
                 if n in nodes:
                     sum += level

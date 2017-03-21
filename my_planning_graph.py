@@ -413,8 +413,8 @@ class PlanningGraph():
         :param node_a2: PgNode_a
         :return: bool
         '''
-        # TODO test for Inconsistent Effects between nodes
-         return (set(node_a1.action.effect_add) & set(node_a2.action.effect_rem) |
+        #TODO test for Inconsistent Effects between nodes
+        return (set(node_a1.action.effect_add) & set(node_a2.action.effect_rem) |
                set(node_a1.action.effect_rem) & set(node_a2.action.effect_add))
         
         #return False
@@ -433,7 +433,7 @@ class PlanningGraph():
         :param node_a2: PgNode_a
         :return: bool
         '''
-        # TODO test for Interference between nodes
+        #TODO test for Interference between nodes
         return  ( len(list(set(node_a1.action.effect_add) & set(node_a2.action.precond_neg))) >0
                    or len(list(set(node_a2.action.effect_add) & set(node_a1.action.precond_neg))) >0
                       or len(list(set(node_a1.action.effect_rem) & set(node_a2.action.precond_pos))) >0

@@ -452,7 +452,7 @@ class PlanningGraph():
         '''
 
         # TODO test for Competing Needs between nodes
-         for node1_parent in node_a1.parents:
+        for node1_parent in node_a1.parents:
             for node2_parent in node_a2.parents:
                 if node1_parent.is_mutex(node2_parent):
                     return True
